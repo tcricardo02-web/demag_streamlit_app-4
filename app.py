@@ -240,4 +240,4 @@ def main():
             st.success("Banco de dados reinicializado.")
 
     # Rest of the main() function remains the same
-
+the app is not working properly, so please, Fix this code
