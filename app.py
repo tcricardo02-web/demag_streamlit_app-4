@@ -231,4 +231,13 @@ def main():
     with st.sidebar:
         st.header("Configurações Gerais")
         unit = st.selectbox("Sistema de unidades", UNIT_OPTIONS, index=0)
-        st.session_state["unit_system
+        st.session_state["unit_system"] = unit
+        if st.button("Resetar DB"):
+            import os
+            if os.path.exists("compressor.db"):
+                os.remove("compressor.db")
+            init_db()
+            st.success("Banco de dados reinicializado.")
+
+    # Rest of the main() function remains the same
+
